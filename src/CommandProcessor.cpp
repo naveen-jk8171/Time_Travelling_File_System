@@ -135,6 +135,9 @@ void snapshot(std::vector<std::string> tokens, int& i){
     }
     while(i < tokens.size()){
         content += tokens[i++];
+        if (i != tokens.size()){
+            content += " ";
+        }
     }
     fileSystem.snapshotFile(filename, content);
 }
